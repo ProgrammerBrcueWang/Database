@@ -1,0 +1,33 @@
+1.查询中用到的关键词主要包含六个，并且他们的书写顺序依次为 
+select--from--where--group by--having--order by 
+
+
+
+
+2：执行时sql语句的书写顺序并不是一样的，而是按照下面的顺序来执行 
+from--where--group by--having--select--order by, 
+from:需要从哪个数据表检索数据 
+where:过滤表中数据的条件 
+group by:如何将上面过滤出的数据分组 
+having:对上面已经分组的数据进行过滤的条件  
+select:查看结果集中的哪个列，或列的计算结果 
+order by :按照什么样的顺序来查看返回的数据 
+
+
+
+
+详见：https://www.cnblogs.com/huminxxl/p/3149097.html
+
+
+mysql的小数保留函数
+https://www.jb51.net/article/44378.htm
+
+SELECT FORMAT(12562.6655,2);
+结果：12,562.6
+
+select truncate(4545.1366,2);
+结果：4545.13，直接截取不四舍五入，还是有问题
+
+select convert(4545.1366,decimal);
+结果：4545.14，达到预期。
+
